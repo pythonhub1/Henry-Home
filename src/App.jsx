@@ -1,12 +1,11 @@
 
 import './App.css'
-
+import logo from './leams1.jpeg';
 import React from "react";
-
+import ApBar from './ApBar.jsx'
 function App() {
 
   return (
-
         <html>
         <head>
             <title>Henry F - Electrical Engineer</title>
@@ -43,7 +42,7 @@ function App() {
         <header>
             <h1>Henry Forman</h1>
             <p>Electrical Engineer | Inventor</p>
-            <img src="./assets/react.svg"  alt="hi"/>
+            <img src={logo}  alt="hi" width="300" height="200"/>
         </header>
 
         <div className="container">

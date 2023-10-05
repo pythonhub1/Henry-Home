@@ -14,36 +14,15 @@ function App() {
             body {
               font-family: Arial, sans-serif;
               background-color: lightblue;
-              margin: 0;
-              padding: 0;
-            }
-            header {
-              text-align: center;
-              padding: 20px;
-            }
-            .container {
-              max-width: 800px;
-              margin: 0 auto;
-              padding: 20px;
-            }
-            .project {
-              border: 1px solid #ddd;
-              padding: 10px;
-              margin-bottom: 20px;
-            }
-            footer {
-              text-align: center;
-              padding: 10px;
-            }
-          `}
+              `}
             </style>
         </head>
         <body>
-        <header>
-            <h1>Henry Forman</h1>
-            <p>Electrical Engineer | Inventor</p>
-            <img src={logo}  alt="hi" width="300" height="200"/>
-        </header>
+        <div>
+            <center><h1>Henry Forman</h1></center>
+            <center><p>Electrical Engineer | Inventor</p></center>
+            <center><img src={logo}  alt="hi" width="300" height="200"/></center>
+        </div>
 
         <div className="container">
             <section id="about">

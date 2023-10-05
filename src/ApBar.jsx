@@ -43,7 +43,7 @@ function ApBar() {
     }
 
     return (
-        <AppBar position="static" height={100}>
+        <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

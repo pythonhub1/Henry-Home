@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from "react-router-dom";
 
 const pages = ["My Projects"];
-const links = ['/inventions'];
+const links = ['/Henry-Home/inventions'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ApBar() {

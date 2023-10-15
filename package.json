@@ -2,7 +2,7 @@
   "name": "h-electronics",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://pythonhub1.github.io/Henry-Home",
+  "homepage": "https://pythonhub1.github.io/Henry-Home/",
   "type": "module",
   "scripts": {
     "dev": "vite",

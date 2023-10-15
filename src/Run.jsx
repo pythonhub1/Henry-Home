@@ -10,7 +10,7 @@ function Run() {
         <Router>
             <ApBar />
             <Routes>
-                <Route exact path='/Henry-Home/' exact element={<App />} />
+                <Route exact path='/Henry-Home/' element={<App />} />
                 <Route path='/inventions/' element={<Projects />} />
             </Routes>
         </Router>

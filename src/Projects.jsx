@@ -27,7 +27,7 @@ function Projects() {
                     <center><Typography variant="h3">My Projects</Typography></center>
 
 
-                    <Button variant="text" onClick={() => navigate('/Henry-Home/')} sx={{textTransform: 'none'}}>
+                    <Button variant="text" onClick={() => navigate('/inventions/my-drone/')} sx={{textTransform: 'none'}}>
                         <Stack
                             direction="row"
                             justifyContent="center"

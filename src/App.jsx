@@ -19,7 +19,7 @@ function App() {
         </head>
         <body>
         <div>
-            <center><h1>Henry Forman (Test!)</h1></center>
+            <center><h1>Henry Forman</h1></center>
             <center><p>Electrical Engineer | Inventor</p></center>
             <center><img src={logo}  alt="hi" width="300" height="200"/></center>
         </div>

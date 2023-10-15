@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route }
     from 'react-router-dom';
 import App from './App.jsx';
 import Projects from './Projects.jsx';
+import Drone from './Drone.jsx'
 function Run() {
     return (
         <Router>
@@ -12,6 +13,7 @@ function Run() {
             <Routes>
                 <Route exact path='/Henry-Home/' element={<App />} />
                 <Route path='/inventions/' element={<Projects />} />
+                <Route path='/inventions/my-drone/' element={<Drone />} />
             </Routes>
         </Router>
     );

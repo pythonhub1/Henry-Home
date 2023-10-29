@@ -50,6 +50,27 @@ function Projects() {
                             </Stack>
                         </Stack>
                     </Button>
+                    <Button variant="text" onClick={() => navigate('/Henry-Home/')} sx={{textTransform: 'none'}}>
+                        <Stack
+                            direction="row"
+                            justifyContent="center"
+                            spacing={4}
+
+                            sx={{padding: 1, border: 3, borderColor: 'primary.main', borderRadius: '16px'}}
+                        >
+                            <img src={logo}  alt="hi" width="30%" height="30%"/>
+                            <Stack
+                                direction="column"
+                                justifyContent="center"
+                                spacing={2}
+                            >
+                                <Typography variant="h4">Levitating Clock</Typography>
+                                <Typography>
+                                    ??? ?????? ????? ???? ????? ????? ,??????  ?????! ???????, ????, ?????. ?????????????????????????????????????????????????
+                                </Typography>
+                            </Stack>
+                        </Stack>
+                    </Button>
 
                 </Stack>
 

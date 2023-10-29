@@ -6,14 +6,17 @@ import { BrowserRouter as Router, Routes, Route }
 import App from './App.jsx';
 import Projects from './Projects.jsx';
 import Drone from './Drone.jsx'
+import Login from './Login.jsx'
 function Run() {
     return (
         <Router>
             <ApBar />
             <Routes>
+                <Route exact path='/Henry-Home/login/' element={<Login />} />
                 <Route exact path='/Henry-Home/' element={<App />} />
-                <Route path='/inventions/' element={<Projects />} />
-                <Route path='/inventions/my-drone/' element={<Drone />} />
+                <Route exact path='/inventions/' element={<Projects />} />
+                <Route exact path='/my-drone/' element={<Drone />} />
+
             </Routes>
         </Router>
     );

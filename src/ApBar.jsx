@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from "react-router-dom";
 
 const pages = ["My Projects"];
-const links = ['/inventions/', '/inventions/big-drone/'];
+const links = ['inventions/', 'big-drone/'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ApBar() {

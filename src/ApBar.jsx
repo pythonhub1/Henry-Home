@@ -13,12 +13,26 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from "react-router-dom";
-
+import {  signOut } from "firebase/auth";
+import {auth} from './firebase';
+import logo from './logout.png';
 const pages = ["My Projects"];
 const links = ['inventions/', 'big-drone/'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ApBar() {
+    let navigate = useNavigate();
+
+
+    const handleLogout = () => {
+        signOut(auth).then(() => {
+            // Sign-out successful.
+            navigate("/Henry-Home/login/");
+            console.log("Signed out successfully")
+        }).catch((error) => {
+            // An error happened.
+        });
+    }
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -37,7 +51,7 @@ function ApBar() {
         setAnchorElUser(null);
     };
 
-    let navigate = useNavigate();
+
     const routeChange = (url) => {
         navigate(url);
     }
@@ -132,10 +146,11 @@ function ApBar() {
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Cart">
+                        <Tooltip title="Logout">
                             <IconButton sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="././cart.png" onClick={() => routeChange("/inventions")}/>
+                                <Avatar alt="Remy Sharp" src={logo} onClick={() => handleLogout()}/>
                             </IconButton>
+
                         </Tooltip>
                     </Box>
                 </Toolbar>

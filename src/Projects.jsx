@@ -1,16 +1,40 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import React from "react";
 import logo from './leams1.jpeg';
 import { useNavigate } from 'react-router-dom'
 import Button from '@mui/material/Button'
-
+import React, { useState, useEffect } from 'react';
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from './firebase';
 
 function Projects() {
     let navigate = useNavigate();
+    const [loggedIn, setLoggedIn] = useState(false)
+    useEffect(()=>{
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/firebase.User
+                const uid = user.uid;
+                setLoggedIn(true)
+                // ...
+                console.log("uid", uid)
+            } else {
+                // User is signed out
+                // ...
 
-    return (
+                console.log("user is logged out")
+                setLoggedIn(false)
+                navigate('/Henry-Home/login');
+            }
+        });
+
+
+    }, [])
+
+    if (loggedIn) {
+        return (
             <>
                 <style>
                     {`
@@ -76,6 +100,11 @@ function Projects() {
 
             </>
 
-    );
+        );
+    }
+
+    else {
+        <></>
+    }
 }
 export default Projects
